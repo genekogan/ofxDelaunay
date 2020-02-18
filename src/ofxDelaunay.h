@@ -48,12 +48,17 @@ public:
 	
     ofMesh triangleMesh; //output of triangulate();
 
+    int ntri; //# tri
+
+    vector<XYZI> & getTriangles() {return vertices;} //only input of triangulate();
+    vector<ITRIANGLE> & getTriangles() {return triangles;} //output of triangulate();
+    
 
 private:
 
-	    vector<XYZI> vertices; //only input of triangulate();
-		vector<ITRIANGLE> triangles; //output of triangulate();
-		int ntri; //# tri
+    vector<XYZI> vertices; //only input of triangulate();
+    vector<ITRIANGLE> triangles; //output of triangulate();
+    int ntri; //# tri
 
 	
 };
